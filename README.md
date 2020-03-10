@@ -1,74 +1,33 @@
 # DH Fullstack - Desafio Javascript I
 
- - Tema: Sistema escolar
- - Tecnologia: Javascript
+Todas as instruções estão no arquivo index.js
 
- O desafio consiste na criação de um sistema para atender o gerenciamento de uma escola. Será desenvolvido funções como registro de alunos, matriculas e afins.
+ ### Instruções
+   
+Todas as funções devem ser excutadas pelo objeto funcoes
 
- O sistema deverá ser elaborado utilizando a linguagem  Javascript, se atentando aos padrões de desenvolvimento como, por exemplo, a utilização do camelCase. Todos os prints ou exibições deverão acontecer diretamente no console.
+Todas as funções deve receber como parêmetro o nome do aluno e não o objeto aluno, como o exemplo:
+funcoes.matricularAluno("Gustavo","UX")
 
- ### Forma de entrega
- Você deverá fazer um fork desse projeto, e fazer o desenvolvimento dentro do mesmo. Após isso, deverá enviar para o professor o link do *SEU* repositório. Se atente para enviar pelo meio de comunicação escolhido para a turma.
+Todas as funções deve ser testadas na área reservada abaixo 
 
- Para mais informações de como fazer um fork:
- <http://gabsferreira.com/forkando-e-clonando-um-repositorio-no-github>
+Todas as função depois de excutadas irão salvar os dados como JSON na pasta database
 
- Além disso, esse exercício deverá ser feito de forma individual poderemos avaliar sua evolução no curso, e proporcionar a você uma auto-avaliação.
+Para restaurar os dados dos alunos para o modo padrão devemos excultar o arquivo backup.js
+Ex: node ./backup.js
 
-
- ### O que deverá ser desenvolvido?
-
- Dentro do arquivo `index.js` desse repositório, há uma lista de alunos base. Em nosso sistema, um aluno é descrito com as seguintes informações:
-
-  - Nome
-  - Curso
-  - Faltas
-  - Notas
-
-  Em que um curso é descrito como:
-
-  - Nome do curso
-  - Data de Matricula
-
-  Diante disso, deverá ser desenvolvido as seguintes funções:
+ ### Funções disponíveis:
+  
  ```javascript
-  function adicionarAluno(nome:string){
-  
-  /*Essa função irá receber uma *string* que é nome do aluno a ser criado. 
-  E seguindo o modelo de aluno, o mesmo deverá ser inserido na lista de alunos.
-  A função deve devolver um feedback de sucesso, caso o aluno seja inserido corretamente.*/
-  }
- 
-  function listarAlunos(){
-  /*Com essa função o usuário poderá ver todos os alunos cadastrados atualmente no sistema. 
-  Vale dizer que As informações deverão ser exibidas em um formato amigável.*/
-  }
-  function buscarAluno(nome:string){
-  /* Por meio dessa função, podemos pesquisar um aluno por nome na lista de aluno. Ela deverá exibir um feedback, tanto para quando encontrar o aluno, tanto quando não encontrar. E deverá devolver um aluno em seu retorno. */
-}
-  function matricularAluno(aluno:object, curso:string){
-  /* Essa funcionalidade irá permitir, cadastrar um aluno em um curso. 
-  Essa função só poderá ser executada em um aluno já devidamente cadastrado no sistema, e deverá armazenar a data atual no momento da matricula
-  Lembre-se de exibir o feedback para o usuário. */
-}
-  function aplicarFalta(aluno:object){
-  /*
-   Ao receber um aluno devidamente cadastrado em nossa lista. Você deverá incrementar uma falta ao aluno. Você deverá dar um feedback ao concluir a tarefa. Só poderá aplicar falta em aluno se o mesmo tiver matriculado em um curso.
-  */
-  }
-  
-  function aplicarNota(aluno:object){
-  /*
-   Ao receber um aluno devidamente cadastrado em nossa lista. Você deverá adicionar uma nota ao aluno na sua lista de notas. Você deverá dar um feedback ao concluir a tarefa. Só poderá aplicar nota em aluno se o mesmo tiver matriculado em um curso.
-  */
-}
 
-   function aprovarAluno(aluno:object){
-   /* 
-   Ao receber um aluno devidamente cadastrado em nossa lista, deverá dizer se o mesmo está aprovado ou não. Os critérios de aprovação são: ter no máximo 3 faltas e média 7 em notas.
-   Só o aluno só poderá ser aprovado se o mesmo tiver matriculado em um curso.
-   */
-   }
+funcoes.adicionarAluno(aluno:string)
+funcoes.listarAlunos()
+funcoes.buscarAluno(aluno:string)
+funcoes.matricularAluno(aluno:string,curso:string)
+funcoes.aplicarFalta(aluno:string)
+funcoes.aplicarNota(aluno:string,nota:number)
+funcoes.aprovarAluno(aluno:string)
+
    ```
 
 ### Links utéis
@@ -81,4 +40,3 @@
     
 
     
-
